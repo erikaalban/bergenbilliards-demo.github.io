@@ -73,13 +73,13 @@ body {
 }
 
 .nav-links li {
-  margin-left: 2rem;
+  margin-left: 2rem !important;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
   transition: all 0.3s ease;
   position: relative;
   padding-bottom: 5px;
@@ -287,6 +287,118 @@ body {
   font-size: 2.5rem;
 }
 
+.usba-championship {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.usba-unified-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.usba-image-side {
+  flex: 0.5;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 15px;
+}
+
+.usba-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.usba-info-side {
+  flex: 1;
+  min-width: 300px;
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.usba-info-side h3 {
+  color: #e74c3c;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.usba-info-side h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.usba-info-side p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.usba-info-side p:first-of-type {
+  font-weight: bold;
+  color: #333;
+}
+
+.usba-info-side p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Media query for very small screens */
+@media (max-width: 600px) {
+  .usba-image-side,
+  .usba-info-side {
+    flex: 1 0 100%;
+  }
+}
+
+.usba-event-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.usba-event-info.event-card {
+  text-align: left;
+  height: 100%;
+}
+
+.usba-event-info.event-card h3 {
+  color: #e74c3c;
+}
+
+.usba-event-info.event-card p:first-of-type {
+  font-weight: bold;
+  color: #333;
+}
+
+.usba-event-info h3 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.usba-event-info h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.usba-event-info p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 .events-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -340,8 +452,10 @@ body {
 }
 
 /* Pro Shop Section */
+
 .proshop {
   padding: 5rem 2rem;
+  margin-top: 60px;
   background: #f5f5f5;
 }
 
@@ -351,9 +465,16 @@ body {
   font-size: 2.5rem;
 }
 
+.proshop-subheading {
+  font-size: 2rem;
+  text-align: center;
+  margin: 4rem 0;
+  color: #333;
+}
+
 .proshop-intro {
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -962,5 +1083,42 @@ footer {
   .league-card.coming-soon::after {
     font-size: 1.8rem;
     padding: 8px 16px;
+  }
+}
+
+/* League banner styling */
+.league-banner-container {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.league-banner {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* League hero styling */
+.league-hero-container {
+  max-width: 100%;
+  margin: 0 auto 3rem;
+  overflow: hidden;
+  height: 400px;
+}
+
+.league-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .league-hero-container {
+    height: 250px;
   }
 }
